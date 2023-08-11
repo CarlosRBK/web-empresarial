@@ -1,0 +1,63 @@
+/* agencias.module.css */
+.selectContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .citySelect {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+    color: black;
+    
+  }
+  
+  
+  .contactoInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  /* styles.module.css */
+.contactoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #f2f2f2;
+
+  }
+  
+  .encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: bold;
+    padding-right: 20px;
+    color: #333; /* Color para el encabezado */
+  }
+
+  
+  .contactoInfo p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    color: #666; /* Color más claro para el contenido */
+
+  }
+
+  .contactoInfo p {
+    margin: 5px 0;
+  }
+  

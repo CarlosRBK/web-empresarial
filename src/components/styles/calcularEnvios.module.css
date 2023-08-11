@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    height: auto;
+  }
+
+  .formContainer > h2 {
+    color: black;
+    margin: 10px;
+    font-weight: 400;
+  }
+  
+  .inputField {
+    padding-left: 15px;
+    color: black;
+    font-weight: bold;
+    background-color: #f2f2f2;
+    width: 315px;
+    height: 30px;
+    outline: none;
+    line-height: normal;
+    font: inherit;
+    text-transform: none;
+    border: none;
+  }
+
+  .selectField {
+    padding-left: 15px;
+    color: black;
+    font-weight: bold;
+    background-color: #f2f2f2;
+    width: 330px;
+    height: 30px;
+    outline: none;
+    line-height: normal;
+    font: inherit;
+    text-transform: none;
+    border: none;
+  }
+  
+  .inputField::placeholder {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .submitBtn {
+    background-color: #ff6b0b;
+    border-radius: 0;
+    height: 60px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    font-weight: bold;
+  }
+  
+  .submitBtn:hover {
+    background-color: #ffddc7;
+    color: #555554;
+  }
+  
+
+  .labelInput{
+  background-color:#e3e3e3;
+  width: 330px;
+  height: 30px;
+  font-weight: 500;
+  color: black;
+  }
+
+  .labelText{
+    padding-left: 10px;
+    font-size: 12px;
+  }

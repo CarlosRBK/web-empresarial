@@ -1,0 +1,93 @@
+/* menuPick.module.css */
+.container {
+  margin-top: 20px;
+}
+
+.componentSelector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pickIcon{
+  width: 80px;
+  margin: 20px;
+}
+
+.button {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;  width: 150px;
+  /* Cambia "150x" a "150px" */
+  height: 150px;
+  /* Mantiene "150px" */
+  font-weight: bold;
+  color: #555554;
+  padding: 10px 15px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: #ffddc7;
+}
+
+.activeButton {
+  background-color: #ff6b0b;
+  font-weight: bold;
+  color: #ffffff;
+  padding-top: 20px;
+}
+
+
+.activeButton:hover {
+  background-color: #ff6b0b;
+}
+
+
+.componentDisplayContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* Ocupa todo el ancho disponible */
+  max-width: none;
+  /* Elimina el máximo ancho */
+  min-width: 0;
+  /* Elimina el mínimo ancho */
+  /* Reduce el padding */
+}
+
+@media (max-width: 768px) {
+  .componentSelector {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    width: 70px;
+    /* Ajusta el ancho para adaptarse mejor a pantallas más pequeñas */
+    height: 70px;
+    /* Ajusta la altura proporcionalmente */
+    font-size: 14px;
+    /* Reduce el tamaño de fuente para dispositivos móviles */
+    padding: 8px 16px;
+    /* Reduce el espacio interno para un aspecto más compacto */
+  }
+
+  .activeButton {
+    padding-top: 12px;
+    /* Ajusta el espacio superior para el botón activo */
+  }
+
+  .componentDisplayContainer {
+    min-width: auto;
+    /* Permite que el contenido se ajuste al ancho de la pantalla */
+    padding: 10px;
+    /* Reduce el espacio interno para dispositivos móviles */
+  }
+}

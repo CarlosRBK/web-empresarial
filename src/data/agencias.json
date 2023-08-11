@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "ciudad": "Asunción",
+    "ruta": "Ruta 1",
+    "numero_contacto": "992 921080",
+    "direccion": "Alto Paraguay 3473 Av. La Victoria, Asunción, Paraguay."
+  },
+  {
+    "id": 2,
+    "ciudad": "Ciudad del Este",
+    "ruta": "Ruta 6",
+    "numero_contacto": "994 360385",
+    "direccion": ""
+  },
+  {
+    "id": 3,
+    "ciudad": "Encarnación",
+    "ruta": "Ruta 1",
+    "numero_contacto": "985 619642",
+    "direccion": "Curupayty, entre Independencia y Honorio González."
+  },
+  {
+    "id": 4,
+    "ciudad": "San Lorenzo",
+    "ruta": "Ruta 1",
+    "numero_contacto": "992 921080",
+    "direccion": ""
+  },
+  {
+    "id": 5,
+    "ciudad": "Luque",
+    "ruta": "Ruta 1",
+    "numero_contacto": "976 565463",
+    "direccion": ""
+  },
+  {
+    "id": 6,
+    "ciudad": "Fernando de la Mora",
+    "ruta": "Ruta 1",
+    "numero_contacto": "992 921080",
+    "direccion": ""
+  },
+  {
+    "id": 7,
+    "ciudad": "Capiatá",
+    "ruta": "Ruta 1",
+    "numero_contacto": "",
+    "direccion": ""
+  },
+  {
+    "id": 8,
+    "ciudad": "Lambaré",
+    "ruta": "Ruta 1",
+    "numero_contacto": "992 921080",
+    "direccion": ""
+  },
+  {
+    "id": 9,
+    "ciudad": "Limpio",
+    "ruta": "Ruta 1",
+    "numero_contacto": "",
+    "direccion": ""
+  },
+  {
+    "id": 10,
+    "ciudad": "Ñemby",
+    "ruta": "Ruta 1",
+    "numero_contacto": "",
+    "direccion": ""
+  },
+  {
+    "id": 11,
+    "ciudad": "Mercado 4",
+    "ruta": "Ruta 3",
+    "numero_contacto": "",
+    "direccion": ""
+  },
+  {
+    "id": 12,
+    "ciudad": "Salto del Guairá",
+    "ruta": "Ruta 3",
+    "numero_contacto": "",
+    "direccion": ""
+  },
+  {
+    "id": 13,
+    "ciudad": "Concepción",
+    "ruta": "Ruta 5",
+    "numero_contacto": "",
+    "direccion": ""
+  },
+  {
+    "id": 14,
+    "ciudad": "Villarrica",
+    "ruta": "Ruta 4",
+    "numero_contacto": "",
+    "direccion": ""
+  },
+  {
+    "id": 15,
+    "ciudad": "Caaguazú",
+    "ruta": "Ruta 2",
+    "numero_contacto": "",
+    "direccion": ""
+  },
+  {
+    "id": 16,
+    "ciudad": "Coronel Oviedo",
+    "ruta": "Ruta 2",
+    "numero_contacto": "",
+    "direccion": ""
+  }
+]

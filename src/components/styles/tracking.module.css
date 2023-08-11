@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    padding-left: 15px;
+    color: black;
+    font-weight: bold;
+    background-color: #f8f8f8;
+    width: 440px;
+    height: 60px;
+    outline: 0;
+    line-height: normal;
+    font: inherit;
+    margin: 0;
+    text-transform: none;
+    border: 0px;
+}
+
+::placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #ff6b0b;
+    border-radius: 0px;
+    height: 60px;
+    margin-left: 5px;
+}
+
+.btn:hover {
+    color:#555554 ;
+    background-color: #ffddc7;
+    border: 0px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.trackOpc {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+

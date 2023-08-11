@@ -1,0 +1,57 @@
+/* Estilos para el footer */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerLinks ul {
+  font-size: 12px;
+  color: #ff6300;
+  list-style: none;
+  display: flex;
+  padding-top: 5px;
+  font-weight: 700;
+  letter-spacing: .75px;
+}
+
+.footerLinks a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  font-size: 11px;
+}
+
+.listFoot {
+  display: flex;
+  flex-direction: column;
+}
+
+.footItems {
+  margin-top: 0;
+  font-weight: 300;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.listItem {
+  padding: 10px;
+}
