@@ -19,7 +19,7 @@ const Agencias = () => {
         onChange={handleCityChange}
         value={selectedCity}
       >
-        <option value="">SELECCIONE UNA CIUDAD</option>
+        <option value="">SELECCIONE UNA AGENCIA</option>
         {data.map((agencia) => (
           <option key={agencia.id} value={agencia.ciudad}>
             {agencia.ciudad}

@@ -18,7 +18,7 @@ const NavBar = () => {
           <Link className={styles.navLinks} to="/">SERVICIO</Link>
         </li>
         <li className={styles.navItem}>
-          <Link className={styles.navLinks} to="/">NOSOTROS</Link>
+          <Link className={styles.navLinks} to="/">RASTREO</Link>
         </li>
         <li className={styles.navItem}>
           <Link className={styles.navLinks} to="/">CONTACTO</Link>
