@@ -28,7 +28,7 @@ const MenuPick = () => {
             alt="Icono de tracking"
             className={styles.pickIcon}
           />
-          ENVIOS
+          SERVICIOS
         </div>
         <div
           className={`${styles.button} ${

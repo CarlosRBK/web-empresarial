@@ -1,20 +1,29 @@
 /* navBar.module.css */
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .navContainer {
-  background-color: rgb(241, 242, 246);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   position: sticky;
   top: 0;
-  /* Fija la barra en la parte superior */
   z-index: 100;
-  /* Asegura que la barra esté por encima de otros elementos */
-  transition: height 0.3s ease; /* Agrega una transición suave para el cambio de altura */
+  transition: height 0.3s ease;
+  background-color: rgba(250, 250, 250, 0.8); /* Fondo semi-transparente */
+  opacity: 1; /* Establece una opacidad predeterminada */
+  transition: opacity 0.3s ease; /* Aplica una transición suave a la opacidad */
+}
+
+.navContainer.hidden {
+  opacity: 0; /* Cambia la opacidad a 0 para ocultar suavemente el NavBar */
 }
 
 .navContainer.sticky {
-  height: 60px; /* Altura reducida cuando es pegajoso */
+  height: 60px;
 }
 
 .itemList {
@@ -26,37 +35,34 @@
 }
 
 .navLinks {
-  color: rgb(131, 131, 131);
+  text-decoration: none;
+  color: #333;
 }
 
 .navLinks:hover {
-  color: rgb(46, 46, 46);
+  color: #ff6b0b;
+}
+
+.itemList > img {
+  width: 100%;
 }
 
 .navItem {
   margin: 0px 10px;
   transition: color 0.3s;
-  /* Agrega una transición suave para el cambio de color */
 }
 
-/* Agrega el efecto de hover */
-.navItem:hover {
-  color: #303030;
-  /* Cambia el color al hacer hover */
-}
-
-
-/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
   .navContainer {
     flex-direction: column;
-    /* Cambia a dirección vertical */
     text-align: center;
-    /* Alinea el texto al centro */
   }
 
   .itemList {
     margin-top: 10px;
-    /* Agrega espacio en la parte superior */
+  }
+
+  .itemList img {
+    margin: 0 auto; /* Centrar el logotipo */
   }
 }

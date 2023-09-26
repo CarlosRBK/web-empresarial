@@ -33,25 +33,82 @@
 .btn {
     background-color: #ff6b0b;
     border-radius: 0px;
-    height: 60px;
+    min-height: 60px;
     margin-left: 5px;
 }
 
 .btn:hover {
-    color:#555554 ;
-    background-color: #ffddc7;
+    color: #ff6b0b;
+    background-color: #fafafa;
     border: 0px;
 }
 
 .row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .trackOpc {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
+    margin-bottom: 25px;
+    width: 330px;
 }
 
+a {
+    color: #FAFAFA;
+}
+
+.inputTrack {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.errorMsg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.inputError {
+    padding-left: 15px;
+    color: black;
+    font-weight: bold;
+    background-color: #FAFAFA;
+    width: 440px;
+    height: 60px;
+    outline: 0;
+    line-height: normal;
+    font: inherit;
+    margin: 0;
+    text-transform: none;
+    border: 2px solid #ff6b0b;
+}
+
+.btnExit {
+    background: none;
+}
+
+.btnExit:hover {
+    border: 1px solid #FAFAFA !important;
+}
+
+.contenedorHidden {
+    animation: fadeIn 1s ease;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
