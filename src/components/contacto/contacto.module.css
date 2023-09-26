@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 110% !important;
+
+}
+
+.contactSection {
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: #FAFAFA;
+    color: #333;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    margin-bottom: 25px;
+}
+
+.contactInfoContainer {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.containerCard {
+    background-color: #FAFAFA;
+    border-radius:  8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    height: 400px;
+    margin: 25px;
+    /* background-color: #FAFAFA; */
+    background-repeat: no-repeat;
+    background-size: fill;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Efecto de sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animación de transición */
+}
+
+.containerCard>i {
+    background-color: #FF6B0B;
+    padding: 15px;
+    border-radius: 150px;
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+.ContactTitle {
+    margin-top: 80px;
+    font-weight: 400;
+    font-size: 35px;
+    color: #333
+}
+
+.containerCard:hover {
+    color: #333;
+    background-color: #FAFAFA;
+    transform: translateY(-5px);
+    /* Levanta la tarjeta al pasar el mouse */
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+    /* Efecto de sombra más pronunciado */
+
+}
+
+.cardServiceContent {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px;
+    min-height: 220px;
+}
+
+.headingCard{
+    margin-top: 20px;
+}

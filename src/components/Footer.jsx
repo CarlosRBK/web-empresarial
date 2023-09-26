@@ -67,8 +67,10 @@ const Footer = () => {
             </li>
             <li className={styles.listItem}>
               <h5>REDES SOCIALES</h5>
-              <ul className={styles.listFoot}>
-                {/* Agrega enlaces a redes sociales aquí */}
+              <ul className={styles.listFootSocial}>
+                <a href="https://www.facebook.com/kdexpresspy" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/kdexpresspy/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.wa.link/iz6c7b"><i class="bi bi-whatsapp" target="_blank" rel="noopener noreferrer"></i></a>
               </ul>
             </li>
             {/* Agrega más enlaces según sea necesario */}

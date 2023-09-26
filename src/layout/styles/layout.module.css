@@ -1,0 +1,4 @@
+.sectionLayout {
+    display: flex;
+    flex-direction: column;
+}
