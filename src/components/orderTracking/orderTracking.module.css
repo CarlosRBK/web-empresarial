@@ -1,5 +1,4 @@
-
-.contenedor{
+.contenedor {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -11,7 +10,7 @@
 	min-height: 200px;
 }
 
-.row{
+.row {
 	padding: 10px;
 	color: #333;
 	margin: 10px;
@@ -30,7 +29,7 @@
 
 .footerTracking {
 	color: #FAFAFA;
-	background-color:#333;
+	background-color: #333;
 	border-start-start-radius: 5px;
 	border-start-end-radius: 5px;
 	margin-top: 10px;
@@ -40,13 +39,33 @@
 	justify-content: center;
 }
 
-.tituloDetails{
+.contenedorBtnMap{
+	margin-top: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 50px;
+}
+
+.contenedorBtnMap > button {
+	background-color: #ff6b0b;
+}
+
+.contenedorBtnMap > button:hover {
+	background-color: #FAFAFA;
+	border: 2px solid #ff6b0b;
+	color: #ff6b0b;
+}
+
+.tituloDetails {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 
 
-.tituloDetails > h3{
+.tituloDetails>h3 {
 	margin: 5px;
 }
 
@@ -56,7 +75,7 @@
 	font: bold;
 }
 
-.trackBar{
+.trackBar {
 	padding: 5px;
 	border: 2px solid #333;
 	border-radius: 5px;
@@ -73,25 +92,25 @@
 	padding: 5px;
 	color: #FAFAFA !important;
 	box-shadow: 1px 1px 0px #333,
-	2px 2px 0px #333,
-	3px 3px 0px #667,
-	4px 4px 0px #999,
-	5px 5px 0px #999,
-	6px 6px 0px #999;
+		2px 2px 0px #333,
+		3px 3px 0px #667,
+		4px 4px 0px #999,
+		5px 5px 0px #999,
+		6px 6px 0px #999;
 	animation: fadeIn 6s ease;
-  }
+}
 
-  .separador {
+.separador {
 	border: 1px solid #333;
 	height: 70px;
-  }
-  
+}
+
 .activeButton:hover {
 	background-color: #ff6b0b;
 	cursor: pointer;
-  }
+}
 
-.OrderItem{
+.OrderItem {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -107,11 +126,11 @@
 	justify-content: center;
 }
 
-.itemRastreo > i {
+.itemRastreo>i {
 	margin: 8px;
 }
 
-.statusP{
+.statusP {
 	padding: 2px;
 	max-width: 120px;
 	font-style: normal;
@@ -121,6 +140,119 @@
 
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.entregaDetalles {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+@media (max-width: 600px) {
+
+
+	.row {
+		padding: 5px;
+		color: #333;
+		margin: 0px;
+	}
+
+
+	.tituloDetails {
+		padding: 10px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	.tituloDetails>h3 {
+		margin: 0px;
+		font-size: 14px;
+	}
+
+
+	.resultTracking {
+		color: #ff6b0b;
+		font: bold;
+		font-size: 14px;
+	}
+
+	.trackBar {
+		border: 2px solid #333;
+		border-radius: 5px;
+		list-style-type: none;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content:space-evenly;
+	}
+
+	.activeButton {
+		margin: 10px;
+		width:1;
+		background-color: #ff6b0b;
+		font-weight: bold;
+		padding: 0px;
+		color: #000000 !important;
+		box-shadow: 1px 1px 0px #333,
+			2px 2px 0px #333,
+			3px 3px 0px #667,
+			4px 4px 0px #999,
+			5px 5px 0px #999,
+			6px 6px 0px #999;
+		animation: fadeIn 6s ease;
+	}
+
+	.activeButton > p {
+		font-size: 10px;
+		max-width: 40px;
+	}
+
+	.separador {
+		border: 1px solid #333;
+		height: 40px;
+	}
+
+	.activeButton:hover {
+		background-color: #ff6b0b;
+		cursor: pointer;
+		
+	}
+
+	.OrderItem {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.itemRastreo {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+
+	.statusP {
+		padding: 5px;
+		min-width: 30px;
+		font-style: normal;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	.contenedorDeTracking{
+		padding: 5px;
+	}
 }

@@ -55,7 +55,7 @@ const Contacto = () => {
                         <h4>Contacto:</h4>
                         <p> (0994) 360385</p>
                         <h4>Dirección:</h4>
-                        <p>Av San Blas y Paisandu.</p>
+                        <p>Av San Blas y Paysandú.</p>
                     </div>
                 </div>
                 

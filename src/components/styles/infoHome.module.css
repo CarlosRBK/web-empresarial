@@ -1,62 +1,169 @@
-.infoContent{
+.infoContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+}
+
+.infoContentNosotros {
+  background-color: #ff6b0b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  /* Ajusta el tamaño de la imagen al contenedor */
+  background-attachment: fixed;
 }
 
 .fontTitle {
+  padding: 25px;
   font-weight: 400;
-  margin-top: 80px;
-  margin-bottom: 10px;
   font-size: 35px;
-  color: #333
+  color: #333;
 }
 
-.card {
-  margin-top: 25px;
-  margin-bottom: 25px;
+.imgContent {
+  width: 100%;
+  border-radius: 250px;
+}
+
+.imgContentNosotros {
+  width: 100%;
+}
+
+.rastreoHelp {
+
+  min-height: 35px;
+  font-size: 25px;
+  padding: 5px;
+  background-color: #FF6B0B;
+  color: #FAFAFA;
+  border-radius: 15px;
+  border: solid 1px #ff6b0b;
+}
+
+.contenedorBtn{
+  margin-top: 15px;
   display: flex;
-  max-width: 800px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.rastreoHelp:hover {
+  padding: 5px;
+  background-color: #FAFAFA;
+  color: #FF6B0B;
+  border-radius: 15px;
+  border: solid 1px #ff6b0b;
+}
+
+
+.cardLeft {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  max-width: 900px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-
+  flex-direction: row-reverse;
 }
 
+.cardRight {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  max-width: 900px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cardNosotros {
+  background-color: #FAFAFA;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  max-width: 900px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+
+.sectionInfo {
+  width: 100%;
+  text-align: center;
+}
 
 .cardImage {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
-.cardImage img {
-  width: 100%;
-  height: 100%;
-  vertical-align: middle;
-  border: 0;
+
+/* tiene gris */
+
+.cardImage2 {
+  background: rgb(250, 250, 250);
+  background: linear-gradient(90deg, rgba(250, 250, 250, 1) 50%, rgba(255, 255, 255, 1) 50%);
+
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.cardContent {
-  flex: 2;
-  padding: 20px;
+.cardContentRight {
+  margin-right: 20px;
   background-color: #FAFAFA;
+  flex: 1;
+  padding: 20px;
 }
+
+
+.cardContentLeft {
+  margin-left: 20px;
+  background-color: #FAFAFA;
+  flex: 1;
+  padding: 20px;
+}
+
 
 .heading {
   line-height: 110% !important;
-  font-size: 28px;
+  font-size: 35px;
   color: #333;
   margin-top: 0px;
   margin-bottom: 15px;
-  font-weight: normal;
+  font-weight: bold;
 
 }
 
+.separator {
+  background-color: #999;
+  margin-top: 1px;
+  height: 1px;
+  padding: 1px;
+  width: 40%;
+  border-radius: 25px;
+}
+
+.separator2 {
+  margin-top: 1px;
+  padding: 2px;
+  background-color: #999;
+  width: 40%;
+  border-radius: 25px;
+}
+
 .paragraph {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 300;
   line-height: 24px;
   color: #333;
@@ -116,7 +223,7 @@
   background-attachment: fixed;
 }
 
-.containerColorService{
+.containerColorService {
   margin-top: 80px !important;
   border-top-right-radius: 68px;
   border-top-left-radius: 68px;
@@ -132,16 +239,10 @@
   font-weight: 500;
 }
 
-.cardImage > i {
+.cardImage>i {
   text-align: center;
   background-color: #FF6B0B;
-  min-width: 75px;
   border-radius: 120px;
-  font-size: 70px;
-  margin-bottom: 15px;
-}
-
-.cardImage > i:hover {
   font-size: 70px;
   margin-bottom: 15px;
 }
@@ -150,3 +251,55 @@
   background-color: #FAFAFA;
 }
 
+.cardMobile {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .infoContent {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .cardContentRight {
+    margin-right: 0;
+
+  }
+
+
+  .cardContentLeft {
+    margin-left: 0;
+  }
+
+  .imgContent {
+    border-radius: 0;
+  }
+  .rastreoHelp {
+
+    min-height: 25px;
+    font-size: 20px;
+    padding: 5px;
+  }
+  
+  .contenedorBtn{
+    margin-top: 15px;
+
+  }
+  
+  .rastreoHelp:hover {
+    padding: 5px;
+  }
+
+}

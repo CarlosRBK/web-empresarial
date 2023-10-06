@@ -2,39 +2,50 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import style from "./styles/tracking.module.css";
 import OrderTracking from "./orderTracking/OrderTracking";
+import { Link } from "react-router-dom";
 
 const Tracking = () => {
   const [numeroDeBoleta, setNumeroDeBoleta] = useState("");
-  const [order, setOrder] = useState({})
+  const [order, setOrder] = useState({});
   const [orderIsValid, setOrderIsValid] = useState(false);
   const [OrderInvalid, setOrderInvalid] = useState(false);
   const [numeroDeRastreo, setNumeroDeRastreo] = useState(0);
-
+  const [selectValue, setSelectValue] = useState("S-"); // Valor predeterminado "S-"
 
   const handleObtenerDatos = async (e) => {
     e.preventDefault();
-
-
-    const apiUrl = `${import.meta.env.VITE_TRACKING_API}${numeroDeBoleta}`;
+    const apiUrl = `${import.meta.env.VITE_TRACKING_API}${selectValue}${numeroDeBoleta}.json`;
     try {
       const response = await axios.get(apiUrl);
       if (response.status === 200) {
-        console.log(response)
         setNumeroDeRastreo(numeroDeBoleta);
         setOrder(response);
         setOrderIsValid(true);
         setOrderInvalid(false);
       }
     } catch (error) {
-      if (error.response.status === 404) {
-        setOrderInvalid(true);
-        console.log(error.message)
-      }
+      setOrderInvalid(true);
     }
+    console.log(orderIsValid)
   };
 
   const handleNumeroDeBoletaChange = (e) => {
-    setNumeroDeBoleta(e.target.value);
+    const newValue = e.target.value;
+    const formattedValue = newValue.replace(/\D/g, ''); // Elimina caracteres no numéricos
+
+    // Limita la entrada a 13 dígitos
+    const limitedValue = formattedValue.slice(0, 13);
+
+    // Aplicar el formateo con guiones automáticamente mientras el usuario escribe
+    let formattedWithHyphens = '';
+    for (let i = 0; i < limitedValue.length; i++) {
+      formattedWithHyphens += limitedValue[i];
+      if ((i === 2 || i === 5) && i < 12) {
+        formattedWithHyphens += '-';
+      }
+    }
+
+    setNumeroDeBoleta(formattedWithHyphens);
   };
 
   const orderInvalidChange = () => {
@@ -46,47 +57,62 @@ const Tracking = () => {
       <form onSubmit={handleObtenerDatos}>
         <div className={style.row}>
           <div className={style.inputTrack}>
-
             {OrderInvalid ? (
-
-              <input
-                type="text"
-                placeholder="N° DE LEVANTE"
-                value={numeroDeBoleta}
-                onChange={handleNumeroDeBoletaChange}
-                className={style.inputError}
-              />
+              <div className={style.inputGroup}>
+                <select
+                  value={selectValue}
+                  onChange={(e) => setSelectValue(e.target.value)}
+                  className={style.select}
+                >
+                  <option value="S-">S-</option>
+                  <option value="C-">C-</option>
+                </select>
+                <input
+                  type="text"
+                  placeholder="N° DE LEVANTE"
+                  value={numeroDeBoleta}
+                  onChange={handleNumeroDeBoletaChange}
+                  className={OrderInvalid ? style.inputError : style.input}
+                />
+              </div>
             ) : (
-              <input
-                type="text"
-                placeholder="N° DE LEVANTE"
-                value={numeroDeBoleta}
-                onChange={handleNumeroDeBoletaChange}
-                className={style.input}
-              />)}
-
+              <div className={style.inputGroup}>
+                <select
+                  value={selectValue}
+                  onChange={(e) => setSelectValue(e.target.value)}
+                  className={style.select}
+                >
+                  <option value="S-">S-</option>
+                  <option value="C-">C-</option>
+                </select>
+                <input
+                  type="text"
+                  placeholder="N° DE LEVANTE"
+                  value={numeroDeBoleta}
+                  onChange={handleNumeroDeBoletaChange}
+                  className={OrderInvalid ? style.inputError : style.input}
+                />
+              </div>
+            )}
             <button type="submit" className={style.btn}>
               RASTREAR
             </button>
           </div>
           <div className={style.trackOpc}>
-            <a href="#">¿NECESITAS AYUDA?</a>
-            {/* <h4><span>MULTIPLES RASTREOS</span> | <span><a href="#">¿NECESITAS AYUDA?</a></span></h4> */}
+            <Link to={'/ayuda-rastreo'}>¿NECESITAS AYUDA?</Link>
           </div>
-
         </div>
-
-
       </form>
       <div className={style.contedorHidden}>
         {OrderInvalid ? (
           <div className={style.errorMsg}>
+            <i className="bi bi-exclamation-triangle"> </i>
             <h3 >
-              <i className="bi bi-exclamation-triangle"></i> El número de boleta no existe.{' '}
-              <button type="button" onClick={orderInvalidChange} className={style.btnExit}>
-                <i className="bi bi-x-lg"></i>
-              </button>
+              El número de boletano existe.{' '}
             </h3>
+            <button type="button" onClick={orderInvalidChange} className={style.btnExit}>
+              <i className="bi bi-x-lg"></i>
+            </button>
           </div>
         ) : (
           ''

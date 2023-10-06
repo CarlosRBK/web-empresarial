@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Tracking from "./Tracking";
-import CalcularEnvios from "./CalcularEnvios";
+import ServiceComponente from "./servicesComponent/ServiceComponente";
 import styles from "./styles/menuPick.module.css";
 import trackingLogo from "../assets/tracking.png";
 import enviosLogo from "../assets/envios.png";
@@ -19,9 +19,9 @@ const MenuPick = () => {
       <div className={styles.componentSelector}>
         <div
           className={`${styles.button} ${
-            selectedComponent === "calcular" ? styles.activeButton : ""
+            selectedComponent === "servicios" ? styles.activeButton : ""
           }`}
-          onClick={() => handleComponentChange("calcular")}
+          onClick={() => handleComponentChange("servicios")}
         >
           <img
             src={enviosLogo}
@@ -58,7 +58,7 @@ const MenuPick = () => {
         </div>
       </div>
       <div className={styles.componentDisplayContainer}>
-        {selectedComponent === "calcular" && <CalcularEnvios />}
+        {selectedComponent === "servicios" && <ServiceComponente />}
         {selectedComponent === "tracking" && <Tracking />}
         {selectedComponent === "agencias" && <Agencias />}
       </div>

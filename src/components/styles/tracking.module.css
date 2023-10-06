@@ -12,10 +12,10 @@
 
 .input {
     padding-left: 15px;
-    color: black;
+    color: #333;
     font-weight: bold;
-    background-color: #f8f8f8;
-    width: 440px;
+    background-color: #FAFAFA;
+    width: 365px;
     height: 60px;
     outline: 0;
     line-height: normal;
@@ -25,8 +25,26 @@
     border: 0px;
 }
 
-::placeholder {
+
+.select {
+    font-weight: bold !important;
+    padding: 15px;
     color: black;
+    font-weight: bold;
+    background-color: #cfcece;
+    width: 65px;
+    height: 60px;
+    outline: 0;
+    line-height: normal;
+    font: inherit;
+    margin: 0;
+    text-transform: none;
+    border: 0px;
+}
+
+
+::placeholder {
+    color: #999;
     font-weight: bold;
 }
 
@@ -74,9 +92,10 @@ a {
     align-items: center;
     justify-content: center;
     animation: fadeIn 1s ease;
-    background-color: #FAFAFA;
+    background-color: #ecb9b9;
     border-radius: 5px;
     padding: 8px;
+    max-width: 100%;
 }
 
 .inputError {
@@ -106,9 +125,92 @@ a {
     animation: fadeIn 1s ease;
     margin-top: 20px;
     margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .input {
+        color: black;
+        font-weight: bold;
+        background-color: #FAFAFA;
+        width: 160px;
+        height: 50px;
+        outline: 0;
+        line-height: normal;
+        font: inherit;
+        margin: 0;
+        text-transform: none;
+        border: 0px;
+    }
+
+    .btn {
+        background-color: #ff6b0b;
+        border-radius: 0px;
+        width: 120px;
+        height: 20px !important;
+        
+
+    }
+
+    .select {
+        height: 50px;
+        font-weight: bold;
+    }
+
+
+    .errorMsg {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn 1s ease;
+        background-color: #ecb9b9;
+        border-radius: 5px;
+        padding: 02px;
+        max-width: 250px;
+    }
+    
+    .errorMsg > h3 {
+        font-size: 15px;
+    }
+
+    .inputError {
+        padding-left: 15px;
+        color: black;
+        font-weight: bold;
+        background-color: #FAFAFA;
+        width: 160px;
+        height: 50px;
+        outline: 0;
+        line-height: normal;
+        font: inherit;
+        margin: 0;
+        text-transform: none;
+        border: 2px solid #ff6b0b;
+    }
+
+    .btnExit {
+        background: none;
+    }
+
 }

@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     line-height: 110% !important;
-
 }
 
 .contactSection {
@@ -10,19 +9,19 @@
     border-bottom-left-radius: 50px;
     background-color: #FAFAFA;
     color: #333;
-    width: 100%;
+    max-width:100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     margin-bottom: 25px;
+    padding: 20px;
 }
 
 .contactInfoContainer {
     display: flex;
     flex-direction: row;
-
+    align-items: center;
 }
 
 .containerCard {
@@ -32,16 +31,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 250px;
-    height: 400px;
-    margin: 25px;
-    /* background-color: #FAFAFA; */
-    background-repeat: no-repeat;
-    background-size: fill;
+    width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+    max-width: 300px; /* Establece un ancho máximo para evitar que sea demasiado ancho en pantallas grandes */
+    margin: 25px 15px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* Efecto de sombra */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Animación de transición */
 }
 
 .containerCard>i {
@@ -53,20 +47,11 @@
 }
 
 .ContactTitle {
-    margin-top: 80px;
-    font-weight: 400;
-    font-size: 35px;
-    color: #333
-}
-
-.containerCard:hover {
+    margin-top: 20px; /* Ajusta el margen superior */
+    font-weight: bold;
+    font-size: 28px; /* Ajusta el tamaño del título */
     color: #333;
-    background-color: #FAFAFA;
-    transform: translateY(-5px);
-    /* Levanta la tarjeta al pasar el mouse */
-    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
-    /* Efecto de sombra más pronunciado */
-
+    text-align: center; /* Centra el texto */
 }
 
 .cardServiceContent {
@@ -78,6 +63,47 @@
     min-height: 220px;
 }
 
-.headingCard{
-    margin-top: 20px;
+/* Media query para pantallas de hasta 600px (celulares) */
+@media (max-width: 600px) {
+    .ContactTitle {
+        font-size: 24px; /* Ajusta el tamaño del título para pantallas pequeñas */
+    }
+
+    .containerCard>i {
+        font-size: 40px; /* Ajusta el tamaño del icono para pantallas pequeñas */
+    }
+    
+    .containerCard {
+        background-color: #FAFAFA;
+        border-radius:  8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+        max-width: 300px; /* Establece un ancho máximo para evitar que sea demasiado ancho en pantallas grandes */
+        margin: 25px 15px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contactSection {
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        background-color: #FAFAFA;
+        color: #333;
+        width: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 25px;
+        padding: 20px;
+    }
+
+    .contactInfoContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

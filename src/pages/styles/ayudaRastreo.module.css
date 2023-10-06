@@ -1,0 +1,116 @@
+/* ayudaRastreo.module.css */
+.container {
+    background: white;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.gifImage {
+    width: 300px;
+    /* Ancho predeterminado para pantallas pequeñas */
+    margin-bottom: 20px;
+}
+
+.instructionContent {
+    background-color: #FAFAFA;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.container > h2 {
+    border-radius: 25px;
+    background-color: #ff6b0b;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    font-size: 55px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.explanation {
+    padding: 10px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #FAFAFA;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.separator {
+    background-color: #FAFAFA;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.link {
+    color: #ff6b0b;
+    text-decoration: underline;
+}
+
+.separatorGrande {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    margin-top: 20px;
+    background-color: #ff6b0b;
+    color: #FAFAFA;
+}
+
+
+.btn:hover {
+    background-color: #FAFAFA;
+    color: #ff6b0b;
+    border: 2 px solid #ff6b0b !important;
+}
+
+/* Estilos específicos para pantallas grandes */
+@media (min-width: 1200px) {
+    .gifImage {
+        width: 700px;
+        /* Ancho para pantallas grandes */
+    }
+
+    .explanation {
+        width: 700px;
+    }
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .explanation {
+        width: 300px;
+    }
+
+    .btn {
+        background-color: #ff6b0b;
+        color: #FAFAFA;
+        margin-bottom: 40px;
+    }
+    
+.container > h2 {
+    width: 90%;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+}

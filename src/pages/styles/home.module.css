@@ -1,38 +1,38 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .containerMenuPick {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .containerContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgb(255, 255, 255);
+  flex-direction: column;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .home {
-    background-size: cover;
-    /* Ajusta el tamaño de la imagen al contenedor */
-    background-attachment: fixed;
-    /* Fija la imagen en su lugar mientras se desplaza el contenido */
-    /* Agrega otros estilos según sea necesario */
-
+  background-size: cover;
+  /* Ajusta el tamaño de la imagen al contenedor */
+  background-attachment: fixed;
+  /* Fija la imagen en su lugar mientras se desplaza el contenido */
+  /* Agrega otros estilos según sea necesario */
 }
 
 .lema {
-    color: #FAFAFA;
-    padding-top: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  color: #FAFAFA;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* InfoKdContent.module.css */
 
@@ -57,6 +57,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -66,4 +67,223 @@
 
 .hidden {
   display: none;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FAFAFA;
+  overflow: hidden;
+}
+
+.loadingLiquid {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(45deg, #FF6B0B, #FFAB5D, #FF6B0B);
+  background-size: 300% 300%;
+  animation: gradientAnimation 4s ease infinite;
+  border-radius: 50%;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.logo {
+  width: 250px;
+  /* Ajusta el tamaño de tu logo */
+  height: 100px;
+  /* Ajusta el tamaño de tu logo */
+  margin-top: 16px;
+}
+
+.loadingText {
+  font-size: 24px;
+  color: #333;
+  margin-top: 16px;
+}
+
+
+.contenedorMas {
+
+  margin-top: 80px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FAFAFA;
+  min-height: 100px;
+  background-color: #FF6B0B;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedorMas>Link {
+  max-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.itemNavMas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.separator {
+  min-height: 60px;
+  border: 1px solid white;
+  width: 1px;
+  background-color: rgb(253, 253, 253);
+}
+
+.LinkText {
+
+  margin: 5px 100px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.itemsMenuMas>a>i {
+  margin-right: 15px;
+  margin-left: 15px;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.backgroundImage {
+  background-size: cover;
+  /* Ajusta el tamaño de la imagen al contenedor */
+  background-attachment: fixed;
+  /* Fija la imagen en su lugar mientras se desplaza el contenido */
+  /* Agrega otros estilos según sea necesario */
+  background-image: url('../../assets/background-truck2.jpg');
+  width: 100%;
+  background-position: center;
+}
+
+@media (max-width: 600px) {
+  @media (max-width: 600px) {
+    /* Estilos específicos para pantallas con ancho máximo de 600px */
+    .containerMenuPick {
+      margin-top: 20px;
+    }
+  
+    .lema {
+      color: #FAFAFA;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lema > span > h1 {
+      font-size: 35px;
+    }
+    
+    .containerMenuPick {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+    }
+
+    .contenedorMas {
+      margin-top: 50px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #FAFAFA;
+      min-height: 80px;
+      background-color: #FF6B0B;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .contenedorMas>a {
+      max-height: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+    }
+
+    .separator {
+      min-height: 60px;
+      border: 1px solid white;
+      width: 1px;
+      background-color: rgb(253, 253, 253);
+    }
+    
+    .LinkText {
+    
+      margin: 5px 100px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+        
+    .itemNavMas {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 120px;
+    }
+    
+    .itemsMenuMas>a>i {
+      margin-right: 15px;
+      margin-left: 15px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .itemsMenuMas {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .itemNavMas > p {
+      text-align: center;
+      width: 100%;
+    }
+    
+    .backgroundImage {
+      background-size:cover;
+      background-repeat: no-repeat;
+      /* Ajusta el tamaño de la imagen al contenedor */
+      background-attachment: fixed;
+      /* Fija la imagen en su lugar mientras se desplaza el contenido */
+      /* Agrega otros estilos según sea necesario */
+      background-image: url('../../assets/background-truck2.jpg');
+      width: 100%;
+      background-position:center;
+    }
+  
+    /* Agrega más estilos según sea necesario para hacer componentes específicos responsivos */
+  }
 }

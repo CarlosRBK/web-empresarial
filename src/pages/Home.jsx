@@ -1,11 +1,12 @@
-import MenuPick from "../components/MenuPick";
 import styles from "./styles/home.module.css";
 import backgroundImage from "../assets/background-truck2.jpg";
 import InfoKdContent from "../components/infoKdContent/InfoKdContent";
-import ServiceComponente from "../components/servicesComponent/ServiceComponente";
 import Contacto from "../components/contacto/Contacto";
 import { useEffect, useRef, useState } from "react";
 import NavBar from "../layout/NavBar";
+import Tracking from "../components/Tracking";
+import Clients from "../components/clientes/Clients";
+import { Link } from "react-router-dom";
 const Home = () => {
   const serviciosRef = useRef(null);
   const contactoRef = useRef(null);
@@ -40,8 +41,7 @@ const Home = () => {
 
   return (
     <section
-      className={styles.home}
-      style={{ backgroundImage: `url(${backgroundImage})`, width: "100%" }}
+      className={styles.backgroundImage}
     >
       <div className={styles.fadeIn}>
         <NavBar isHidden={isNavBarHidden} />
@@ -57,18 +57,59 @@ const Home = () => {
           </span>
         </div>
         <div className={styles.containerMenuPick}>
-          <MenuPick />
+          <Tracking />
         </div>
-        <div className={`${styles.infoKdContent} ${isVisible ? styles.visible : ''}`}>
-          <div className={styles.containerContent}>
-            <InfoKdContent />
-            <section id="services" ref={serviciosRef}>
-              <ServiceComponente />
-            </section>
-            <section id="contacto" ref={contactoRef}>
-              <Contacto />
-            </section>
+        <section className={styles.contenedorMas}>
+
+          <div className={styles.itemsMenuMas}>
+            <Link to={'/nosotros'} className={styles.itemNavMas}>
+              <i>KD</i>
+            </Link>
+            <Link to={'/nosotros'} className={styles.itemNavMas}>
+              <p className={styles.LinkText}>Sobre Nosotros
+              </p>
+            </Link>
           </div>
+
+          <div className={styles.separator}>
+            
+          </div>
+          <div className={styles.itemsMenuMas}>
+            <Link to={'/construccion'} className={styles.itemNavMas}>
+
+              <i class="bi bi-briefcase"></i>
+            </Link>
+            <Link to={'/construccion'} className={styles.itemNavMas}>
+              <p className={styles.LinkText}>Para Empresas
+              </p>
+            </Link>
+          </div>
+          <div className={styles.separator}>
+            
+          </div>
+          <div className={styles.itemsMenuMas}>
+            <Link to={'/construccion'} className={styles.itemNavMas}>
+
+              <i class="bi bi-building-up"></i>
+            </Link>
+            <Link to={'/construccion'} className={styles.itemNavMas}>
+
+              <p className={styles.LinkText}>Red KD
+              </p>
+            </Link>
+          </div>
+        </section>
+        <div className={styles.containerContent}>
+          <InfoKdContent />
+          {/* <section id="services" ref={serviciosRef}>
+              <ServiceComponente />
+            </section> */}
+          <section id="contacto" ref={contactoRef}>
+            <Contacto />
+          </section>
+          <section>
+            <Clients />
+          </section>
         </div>
       </div>
     </section>

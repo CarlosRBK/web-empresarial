@@ -1,0 +1,49 @@
+
+*{
+    line-height: 110% !important;
+}
+
+.contenedor {
+    color: #333;
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.carrouselImgContenedor{
+    padding: 10px;
+}
+
+.logos {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ImagenesCarrousel {
+    max-width: 180px;
+    max-height: 200px;
+}
+
+.titulo > p{
+    margin-top: 15px;
+}
+
+
+@media (max-width: 600px) {
+    .ImagenesCarrousel {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .contenedor {
+        color: #333;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .titulo{
+        padding: 15px;
+    }
+}

@@ -24,7 +24,7 @@ const Agencias = () => {
           <option value="">SELECCIONE UNA AGENCIA</option>
           {data.map((agencia) => (
             <option key={agencia.id} value={agencia.ciudad}>
-              {agencia.ciudad}
+              {agencia.ciudad.toUpperCase()}
             </option>
           ))}
         </select>

@@ -25,26 +25,27 @@ const NavBar = ({ isHidden }) => {
     };
   }
 
-    return (
-      <nav className={`${styles.navContainer} ${isHidden ? styles.hidden : ''}`}>          <ul className={styles.itemList}>
-        <img src={logo} alt="Logo de KD Express" />
-      </ul>
-        <ul className={styles.itemList}>
-          <li className={styles.navItem}>
-            <Link className={styles.navLinks} to="/">INICIO</Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link className={styles.navLinks} onClick={scrollToServices}>SERVICIO</Link>
-          </li>
-          {/* <li className={styles.navItem}>
+  return (
+    <nav className={`${styles.navContainer} ${isHidden ? styles.hidden : ''}`}>          
+    <ul className={styles.itemList}>
+      <img src={logo} alt="Logo de KD Express" />
+    </ul>
+      <ul className={styles.itemList}>
+        <li className={styles.navItem}>
+          <Link className={styles.navLinks} to="/">INICIO</Link>
+        </li>
+        <li className={styles.navItem}>
+          <Link className={styles.navLinks} onClick={scrollToServices}>SERVICIO</Link>
+        </li>
+        {/* <li className={styles.navItem}>
             <Link className={styles.navLinks} to="/">RASTREO</Link>
           </li> */}
-          <li className={styles.navItem}>
-            <Link className={styles.navLinks} onClick={scrollToContact}>CONTACTO</Link>
-          </li>
-        </ul>
-      </nav>
-    );
-  };
+        <li className={styles.navItem}>
+          <Link className={styles.navLinks} onClick={scrollToContact}>CONTACTO</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
-  export default NavBar;
+export default NavBar;
